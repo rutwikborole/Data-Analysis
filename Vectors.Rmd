@@ -1,0 +1,100 @@
+---
+output:
+  word_document: default
+  html_document: default
+---
+Setting the Seed:
+
+This ensures the reproducibility of the random numbers generated.
+```{r}
+set.seed(100)
+```
+
+Generating Random Values:
+
+Generates 100 random values from a normal distribution with mean 7 and standard deviation 4.
+```{r}
+temp <- c(rnorm(100, mean = 7, sd = 4))
+```
+
+Setting Names:
+
+Assigns names to each element in the temp vector, labeling them as "D-1" to "D-100".
+```{r}
+names(temp) <- paste0("D-", 1:100)
+```
+
+Rounding Values:
+
+```{r}
+temp <- round(temp, digits = 1)
+```
+Rounds each value in the temp vector to one decimal place.
+
+Calculating Days with Temperature Greater than the Mean:
+```{r}
+gt_mean <- mean(temp)
+gt_temp <- temp[temp > gt_mean]
+length(gt_temp)
+```
+
+Calculates the mean of the temp vector and finds how many days have temperatures above this mean.
+
+Finding Maximum Temperature Day:
+```{r}
+max_temp <- max(temp)
+n = names(temp)[match(max_temp, temp)]
+cat("The max temp was on day", n, "with a value of", max_temp)
+```
+Identifies the day with the maximum temperature and prints it.
+
+Finding Minimum Temperature Day:
+
+```{r}
+min_temp <- min(temp)
+n = names(temp)[match(min_temp, temp)]
+cat("The min temp was on day", n, "with a value of", min_temp)
+```
+Identifies the day with the minimum temperature and prints it.
+
+Creating Warnings Vector:
+```{r}
+
+warnings <- c(ifelse(temp <= 4.0, 'Warning', 'Normal'))
+```
+Creates a vector that labels days as "Warning" if the temperature is less than or equal to 4.0, otherwise "Normal".
+
+Counting Warning Days:
+
+```{r}
+warn_days <- c(warnings == "Warning")
+disp <- temp[warn_days]
+disp_days = length(disp)
+cat("The number of days the warnings were in operation =", disp_days)
+```
+Counts and displays the number of days when the temperature warning was in place.
+
+Displaying Warning Days:
+```{r}
+ww = names(temp)[match(disp, temp)]
+ww
+```
+Lists the days when the temperature warning was in place.
+
+Tabular Display of Warnings:
+
+```{r}
+tw <- table(warnings)
+tw
+```
+Displays the count of "Warning" and "Normal" days in a table format.
+
+Finding Maximum Sequence of Warnings:
+```{r}
+len <- rle(warnings)
+len1 <- tapply(len$lengths, len$values, max)
+disp_warn <- len1[2]
+disp_norm <- len1[1]
+cat("The maximum run of days with warnings was", disp_warn, "\nThe maximum run of days without warnings was", disp_norm)
+```
+Uses the rle() function to find the longest sequence of consecutive "Warning" and "Normal" days.
