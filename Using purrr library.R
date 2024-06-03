@@ -1,6 +1,3 @@
-#Assignment 8
-#Name: Rutwik Borole | Id: 22224253
-
 #Importing Libraries and setting seed value to 200
 library(aimsir17)
 library(dplyr)
