@@ -1,4 +1,4 @@
-#Name: Rutwik Borole | Id: 22224253
+
 
 #Write a function to convert data frame into List.
 conv_df_to_list <- function (myvar){
