@@ -1,6 +1,3 @@
-#Assignment 7
-#Name: Rutwik Borole | Id: 22224253
-
 #Importing libraries
 library(aimsir17)
 library(ggplot2)
