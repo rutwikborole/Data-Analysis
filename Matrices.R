@@ -1,6 +1,3 @@
-#Assignment 4
-#Name:Rutwik Borole | Id:22224253
-
 #Create the synthetic data for 5 subjects
 
 set.seed(100)
