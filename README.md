@@ -1,7 +1,7 @@
 <h1>Data Analysis in R</h1>
 
 <h2>Description</h2>
-Project consists of important features of R programming language in Data Analysy with examples
+Data Analysis using R (Fundamentals)
 <br/>
 
 
