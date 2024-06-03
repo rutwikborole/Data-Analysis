@@ -1,5 +1,3 @@
-#Name: Rutwik Borole | Id: 22224253
-
 library(repurrrsive)
 
 #A function to get List of Directors:
