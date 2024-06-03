@@ -17,9 +17,7 @@ Data Analysis using R (Fundamentals)
 <h2>Program walk-through:</h2>
 
 <p align="center">
-Launch the utility: <br/>
-<img src="Enter link" height="80%" width="80%" alt="Enter Heading"/>
-<br />
+This is a list of short practise programs that I created while learning R language for Data Analysis
 </p>
 
 <!--
