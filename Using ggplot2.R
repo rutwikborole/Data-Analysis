@@ -1,6 +1,3 @@
-#Assignment 5
-#Name: Rutwik Borole | Id: 22224253
-
 #Importing libraries
 library(nycflights13)
 library(ggplot2)
