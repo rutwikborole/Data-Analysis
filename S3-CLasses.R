@@ -1,6 +1,3 @@
-#Assignment 9
-#Name: Rutwik Borole | Id: 22224253
-
 #importing libraries
 library(purrr)
 library(dplyr)
